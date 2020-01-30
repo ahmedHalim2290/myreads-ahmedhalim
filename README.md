@@ -1,5 +1,5 @@
 # MyReads Project
-This is David Jarrins MyReads project. This project can be used to search for book titles and store them on different shelves
+This is Ahmed Abd Elhalim MyReads project. This project can be used to search for book titles and store them on different shelves
 depending on what you are currently reading, what you have read and what you would like to read.
 
 # Installation
