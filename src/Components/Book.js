@@ -5,7 +5,7 @@ import noImage from '../icons/noImage.jpg'
 
 
 export class Book extends Component {
-   
+
     static propTypes = {
         BookDetails: PropTypes.object.isRequired,
         booksChange: PropTypes.func.isRequired
@@ -26,7 +26,7 @@ export class Book extends Component {
                             backgroundImage: `url(${BookDetails.imageLinks.thumbnail ? BookDetails.imageLinks.thumbnail : noImage})`
                         }}></div>
                         <div className="book-shelf-changer">
-                            <select value={BookDetails.shelf} onChange={this.onChangeBook} >
+                            <select value={BookDetails.shelf ? BookDetails.shelf : "none"} onChange={this.onChangeBook} >
                                 <option value="move" disabled>Move to...</option>
                                 <option value="currentlyReading">Currently Reayding</option>
                                 <option value="wantToRead">Want to Read</option>
