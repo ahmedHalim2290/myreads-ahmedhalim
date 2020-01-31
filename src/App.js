@@ -35,11 +35,10 @@ class BooksApp extends React.Component {
           </div>
           <Route exact path='/' render={() => (<div><BookCase booksChange={this.booksChange} Allbooks={books}></BookCase><div className="open-search"><Link to="/search">Add a book</Link></div></div>)}></Route>
         </div>
-        <Route exact path='/Search' render={() => (<Search booksChange={this.booksChange}></Search>)}></Route>
+        <Route exact path='/Search' render={() => (<Search booksHaveCat={books} booksChange={this.booksChange}></Search>)}></Route>
       </div>
     )
   }
-  
 }
 
 export default BooksApp

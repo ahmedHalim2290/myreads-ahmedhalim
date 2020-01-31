@@ -23,7 +23,7 @@ export class Book extends Component {
                     <div className="book-top">
                         <div className="book-cover" style={{
                             width: 128, height: 193,
-                            backgroundImage: `url(${BookDetails.imageLinks.thumbnail ? BookDetails.imageLinks.thumbnail : noImage})`
+                            backgroundImage: `url(${(BookDetails.imageLinks && BookDetails.imageLinks.thumbnail) ? BookDetails.imageLinks.thumbnail : noImage})`
                         }}></div>
                         <div className="book-shelf-changer">
                             <select value={BookDetails.shelf ? BookDetails.shelf : "none"} onChange={this.onChangeBook} >

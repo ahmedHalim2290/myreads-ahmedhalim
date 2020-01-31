@@ -14,8 +14,7 @@ export class Search extends Component {
 
     state = {
         books: [],
-        query: ''
-
+        Booksnotfound: ''
     }
     updateBookSearchState = (books) => {
 
@@ -58,15 +57,15 @@ export class Search extends Component {
             bookApi.search(Query).then(Searchedbooks => {
                 this.updateBookSearchState(Searchedbooks);
                 if (Searchedbooks !== undefined && Searchedbooks.error !== "empty query") {
-
-                    this.setState({ books: Searchedbooks });
-
+                    this.setState({ books: Searchedbooks, Booksnotfound: '' });
                 }
                 else
-                    this.setState({ books: [] });
+                    this.setState({ books: [], Booksnotfound: 'Books not found' });
 
             });
         }
+        else
+            this.setState({ books: [], Booksnotfound: '' });
     }
 
     booksChangeInSeachCom = (book, cat) => {
@@ -96,8 +95,8 @@ export class Search extends Component {
                                     ></Book>
                                 </li>
                             )}
-
                         </ol>
+                        {this.state.Booksnotfound}
                     </div>
                 </div>
             </div>

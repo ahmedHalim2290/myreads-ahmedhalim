@@ -16,31 +16,23 @@ export class BookCase extends Component {
 
     render() {
         const { Allbooks } = this.props;
-
+        const Categories = [
+            { name: 'currentlyReading', title: 'Currently Reading' },
+            { name: 'wantToRead', title: 'Want to Read' },
+            { name: 'read', title: 'Read' }
+        ]
         return (
             <div>
                 <div className="list-books-content">
-                    <div className="bookshelf">
-                        <h2 className="bookshelf-title">Currently Reading</h2>
-                        <BookCategory
-                            books={Allbooks.filter(b => b.shelf === 'currentlyReading')}
-                            booksChange={this.booksChangefun}
-                        ></BookCategory>
-                    </div>
-                    <div className="bookshelf">
-                        <h2 className="bookshelf-title">Want to Read</h2>
-                        <BookCategory
-                            books={Allbooks.filter(b => b.shelf === 'wantToRead')}
-                            booksChange={this.booksChangefun}
-                        ></BookCategory>
-                    </div>
-                    <div className="bookshelf">
-                        <h2 className="bookshelf-title">Read</h2>
-                        <BookCategory
-                            books={Allbooks.filter(b => b.shelf === 'read')}
-                            booksChange={this.booksChangefun}
-                        ></BookCategory>
-                    </div>
+                    {Categories.map(C =>
+                        <div className="bookshelf">
+                            <h2 className="bookshelf-title">{C.title}</h2>
+                            <BookCategory
+                                books={Allbooks.filter(b => b.shelf === C.name)}
+                                booksChange={this.booksChangefun}
+                            ></BookCategory>
+                        </div>
+                    )}
                 </div>
             </div>
         )
