@@ -6,7 +6,7 @@ depending on what you are currently reading, what you have read and what you wou
 ## Project Setup
 
 1. Clone the Project - `git clone https://github.com/ahmedHalim2290/myreads-ahmedhalim.git`
-2. Go into the directory where the project now lives - `cd reactnd-contacts-complete`
+2. Go into the directory where the project now lives - `cd myreads-ahmedhalim`
 3. Install the dependencies - `npm install`
 4. Start the app - `npm start`
 
