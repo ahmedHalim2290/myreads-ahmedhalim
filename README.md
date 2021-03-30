@@ -2,10 +2,13 @@
 This is Ahmed Abd Elhalim MyReads project. This project can be used to search for book titles and store them on different shelves
 depending on what you are currently reading, what you have read and what you would like to read.
 
-# Installation
-In order to install and use this project you must run two commands in the console.
-1) npm install
-2) npm start
+
+## Project Setup
+
+1. Clone the Project - `git clone https://github.com/udacity/reactnd-contacts-complete.git`
+2. Go into the directory where the project now lives - `cd reactnd-contacts-complete`
+3. Install the dependencies - `npm install`
+4. Start the app - `npm start`
 
 These two commands will install all of the dependencies needed for this project and will start the server
 
